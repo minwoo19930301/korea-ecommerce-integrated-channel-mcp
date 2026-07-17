@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "korea-ecommerce-integrated-channel-mcp"
+version = "0.2.0"
+description = "Manage product listings across major Korean e-commerce channels through one MCP server"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = ["mcp", "ecommerce", "korea", "seller", "marketplace"]
+dependencies = [
+  "bcrypt>=4.2,<5",
+  "httpx>=0.28,<1",
+  "mcp>=1.27,<2",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "PyJWT>=2.10,<3",
+]
+
+[project.urls]
+Homepage = "https://github.com/minwoo19930301/korea-ecommerce-integrated-channel-mcp"
+Repository = "https://github.com/minwoo19930301/korea-ecommerce-integrated-channel-mcp"
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<9",
+  "pytest-asyncio>=0.25,<1",
+  "ruff>=0.9,<1",
+]
+
+[project.scripts]
+korea-ecommerce-integrated-channel-mcp = "korea_ecommerce_mcp.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/korea_ecommerce_mcp"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "ASYNC"]

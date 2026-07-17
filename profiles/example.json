@@ -1,0 +1,38 @@
+{
+  "profile_id": "example",
+  "description": "Shape-only example. Replace policy and category fields before live use.",
+  "payloads": {
+    "smartstore": {
+      "body": {
+        "originProduct": {
+          "name": "{{product.name}}",
+          "salePrice": "{{product.price}}",
+          "stockQuantity": "{{product.stock}}",
+          "detailContent": "{{product.description_html}}",
+          "sellerManagementCode": "{{product.sku}}"
+        },
+        "smartstoreChannelProduct": {}
+      }
+    },
+    "coupang": {
+      "body": {
+        "sellerProductName": "{{product.name}}",
+        "displayProductName": "{{product.name}}",
+        "items": []
+      }
+    },
+    "elevenst": {
+      "content_type": "application/xml;charset=UTF-8",
+      "body": "<Product><sellerPrdCd>{{product.sku}}</sellerPrdCd><prdNm>{{product.name}}</prdNm><selPrc>{{product.price}}</selPrc></Product>"
+    },
+    "esm": {
+      "body": {
+        "itemBasicInfo": {
+          "goodsName": "{{product.name}}",
+          "sellManageCode": "{{product.sku}}"
+        },
+        "itemAddtionalInfo": {}
+      }
+    }
+  }
+}
