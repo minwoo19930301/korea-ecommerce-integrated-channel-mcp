@@ -1,11 +1,5 @@
 # Korea E-commerce Integrated Channel MCP
 
-<!-- PROJECT-PRESENTATION:START -->
-<a href="https://github.com/minwoo19930301/korea-ecommerce-integrated-channel-mcp"><img src=".github/project-cover.svg" alt="Korea E-commerce Integrated Channel MCP" width="960"></a>
-
-[![QUICK START](https://img.shields.io/badge/QUICK%20START-374151?style=for-the-badge)](#실제-사용-흐름) [![SOURCE](https://img.shields.io/badge/SOURCE-444444?style=for-the-badge)](https://github.com/minwoo19930301/korea-ecommerce-integrated-channel-mcp)
-<!-- PROJECT-PRESENTATION:END -->
-
 상품이 10개일 때는 판매자센터를 몇 번 오가며 직접 등록할 수 있습니다. 상품이 1,000개, 10,000개가 되면 이야기가 달라집니다. 판매처마다 화면이 다르고, 같은 가격과 재고를 여러 번 입력해야 하며, 한 곳에서 빠뜨린 수정 사항이 그대로 판매 사고로 이어지기도 합니다.
 
 Korea E-commerce Integrated Channel MCP는 이런 반복 작업을 한곳으로 모으기 위해 만든 복합 MCP 서버입니다. 한 번 정리한 상품 정보를 네이버 스마트스토어, 쿠팡, 11번가, 지마켓·옥션에 맞춰 등록하고, 이후 수정·판매중지·재개·삭제도 같은 방식으로 처리합니다.
